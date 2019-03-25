@@ -10,7 +10,7 @@ import java.util.Random;
 class Logo extends JFrame 
 {
     Logo() 
-    {
+    {try{
         setUndecorated(true);
         setVisible(true);
         setSize(600, 348);
@@ -20,14 +20,15 @@ class Logo extends JFrame
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         setResizable(false);
         JPanel p=new JPanel(); 
-        ImageIcon Q=new ImageIcon("C:\\Users\\Prajith Nair\\Desktop\\Stuff\\Auction\\Load.gif");
-        JLabel J=new JLabel(Q);
+        URL url_back=new URL("https://i.ibb.co/R4GddTk/Load.gif");
+        Image Q=ImageIO.read(url_back.openStream());
+        JLabel J=new JLabel(new ImageIcon(Q));
         J.setBounds(0,0,600, 348);
         p.setLayout(null);
         p.add(J);
         add(p);
         setVisible(true);
-        
+        }catch(Exception e){}
     }
     public static void main(String args[])
     {

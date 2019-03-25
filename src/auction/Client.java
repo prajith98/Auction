@@ -58,8 +58,9 @@ public class Client extends JFrame implements ActionListener
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         JPanel p=new JPanel();
-        ImageIcon Q=new ImageIcon("C:\\Users\\Prajith Nair\\Desktop\\Stuff\\Auction\\Back1.jpg");
-        JLabel J=new JLabel(Q);
+        URL url_back=new URL("https://i.ibb.co/CVnjpMp/Back1.jpg");
+        Image Q=ImageIO.read(url_back.openStream());
+        JLabel J=new JLabel(new ImageIcon(Q));
         J.setBounds(0,0,428,536);  
         p.setLayout(null);
         URL url_Photo = new URL(Photo);

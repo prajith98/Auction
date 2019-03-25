@@ -2,6 +2,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.sql.*;
+import java.net.*;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 public class Login extends JFrame implements ActionListener
 {
     JButton l,a;
@@ -9,7 +12,7 @@ public class Login extends JFrame implements ActionListener
     JPasswordField password;
     boolean status=false;
     Login()
-    {    
+    {    try{
         setTitle("FIFA 18| Auction ");
 	setSize(434, 558);
         setBackground(Color.white);
@@ -19,8 +22,9 @@ public class Login extends JFrame implements ActionListener
         Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         JPanel p=new JPanel();
-        ImageIcon Q=new ImageIcon("C:\\Users\\Prajith Nair\\Desktop\\Stuff\\Auction\\Login.jpg");
-        JLabel J=new JLabel(Q);
+        URL url_back=new URL("https://i.ibb.co/q9jQLS5/lOGIN.jpg");
+        Image Q=ImageIO.read(url_back.openStream());
+        JLabel J=new JLabel(new ImageIcon(Q));
         l=new JButton("LOGIN");
         a=new JButton("ADMIN");
         user.setBounds(65,220,310,50);
@@ -48,6 +52,7 @@ public class Login extends JFrame implements ActionListener
         this.getRootPane().setDefaultButton(l);
         l.addActionListener(this);
         a.addActionListener(this);
+        }catch(Exception e){}
     }
     int Check()throws Exception
         {   

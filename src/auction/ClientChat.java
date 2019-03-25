@@ -70,8 +70,9 @@ public class ClientChat implements ActionListener
             Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
             JF.setLocation(dim.width/2-JF.getSize().width/2, dim.height/2-JF.getSize().height/2);
             JPanel p=new JPanel();
-            ImageIcon Q=new ImageIcon("C:\\Users\\Prajith Nair\\Desktop\\Stuff\\Auction\\ChatRoom.png");
-            JLabel J=new JLabel(Q);
+            URL url_back=new URL("https://i.ibb.co/QkX61j5/ChatRoom.png");
+            Image Q=ImageIO.read(url_back.openStream());
+            JLabel J=new JLabel(new ImageIcon(Q));
             URL url_Photo = new URL(this.Photo);
             Image image_Photo = ImageIO.read(url_Photo.openStream());
             JLabel label_UName=new JLabel(UName.toUpperCase());
