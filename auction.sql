@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2019 at 10:04 AM
+-- Generation Time: Mar 26, 2019 at 06:06 AM
 -- Server version: 10.1.24-MariaDB
 -- PHP Version: 7.1.6
 
@@ -38,9 +38,9 @@ CREATE TABLE `bank` (
 --
 
 INSERT INTO `bank` (`ID`, `AMT`) VALUES
-(1, 1750),
-(2, 1500),
-(3, 1900);
+(1, 2000),
+(2, 1880),
+(3, 2000);
 
 -- --------------------------------------------------------
 
@@ -77,7 +77,7 @@ INSERT INTO `count` (`C`, `id`) VALUES
 (17, 17),
 (18, 18),
 (19, 19),
-(20, 20),
+(999, 20),
 (21, 21),
 (22, 22),
 (23, 23),
@@ -89,7 +89,7 @@ INSERT INTO `count` (`C`, `id`) VALUES
 (29, 29),
 (30, 30),
 (31, 31),
-(32, 32),
+(999, 32),
 (33, 33),
 (34, 34),
 (35, 35),
@@ -109,7 +109,7 @@ INSERT INTO `count` (`C`, `id`) VALUES
 (49, 49),
 (50, 50),
 (51, 51),
-(52, 52),
+(999, 52),
 (53, 53),
 (54, 54),
 (55, 55),
@@ -187,7 +187,7 @@ INSERT INTO `count` (`C`, `id`) VALUES
 (127, 127),
 (128, 128),
 (129, 129),
-(130, 130),
+(999, 130),
 (131, 131),
 (132, 132),
 (133, 133),
@@ -215,7 +215,7 @@ INSERT INTO `count` (`C`, `id`) VALUES
 (155, 155),
 (156, 156),
 (157, 157),
-(158, 158),
+(999, 158),
 (159, 159),
 (160, 160),
 (161, 161),
@@ -455,12 +455,8 @@ CREATE TABLE `prajith` (
 --
 
 INSERT INTO `prajith` (`Player`, `Bought for`) VALUES
-('T. Kroos', 100),
-('Morata', 70),
-('M. Neuer', 90),
-('E. Garay', 40),
-('Pepe', 200),
-('X. Shaqiri', 30);
+('O.Dembele', 70),
+('I. Rakitic', 50);
 
 -- --------------------------------------------------------
 
@@ -472,16 +468,6 @@ CREATE TABLE `sourav` (
   `Player` varchar(30) NOT NULL,
   `Bought for` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `sourav`
---
-
-INSERT INTO `sourav` (`Player`, `Bought for`) VALUES
-('M. Benatia', 70),
-('D. Alli', 50),
-('Vitolo', 40),
-('C .Azpilicueta', 50);
 
 -- --------------------------------------------------------
 
